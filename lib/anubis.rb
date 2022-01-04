@@ -3,8 +3,8 @@
 require_relative "anubis/version"
 
 module Anubis
-  def self.judge_at_end(config, ignore_models: [])
-    config.after type: :feature do
+  def self.judge_at_end(config, ignore_models: [], type: :system)
+    config.after type: type do
       ApplicationRecord.subclasses.reject {|klass| klass.abstract_class }.all? {|klass|
         next if ignore_models.include? klass
 

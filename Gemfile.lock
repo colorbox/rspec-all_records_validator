@@ -1,0 +1,21 @@
+PATH
+  remote: .
+  specs:
+    rspec_all_record_validattor_after_system_spec (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.15.0)
+    rake (13.0.6)
+
+PLATFORMS
+  x86_64-darwin-18
+
+DEPENDENCIES
+  minitest (~> 5.0)
+  rake (~> 13.0)
+  rspec_all_record_validattor_after_system_spec!
+
+BUNDLED WITH
+   2.3.1

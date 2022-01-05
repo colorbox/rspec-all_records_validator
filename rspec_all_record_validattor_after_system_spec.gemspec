@@ -8,8 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["colorbox"]
   spec.email         = ["colorbox222@gmail.com"]
 
-  spec.summary       = "validate all objects at last of system spec"
-  spec.description   = "validate all objects at last of system spec"
+  spec.summary       = "validate all objects at end of system spec"
   spec.homepage      = "https://github.com/colorbox/rspec_all_record_validattor_after_system_spec"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
@@ -25,6 +24,6 @@ Gem::Specification.new do |spec|
   end
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activemodel", ">= 5.0.0"
-  spec.add_dependency "rspec-rails", ">= 3.10.0"
+  spec.add_dependency "activemodel", "~> 5.0.0"
+  spec.add_dependency "rspec-rails", "~> 3.10.0"
 end

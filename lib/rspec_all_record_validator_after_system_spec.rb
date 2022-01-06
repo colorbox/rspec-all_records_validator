@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "rspec_all_record_validattor_after_system_spec/version"
+require_relative "rspec_all_record_validator_after_system_spec/version"
 
-module RSpecAllRecordValidattorAfterSystemSpec
+module RSpecAllRecordvalidatorAfterSystemSpec
   def self.judge_at_end(config, ignore_models: [], type: :system)
     config.after type: type do
       ApplicationRecord.subclasses.reject {|klass| klass.abstract_class }.all? {|klass|

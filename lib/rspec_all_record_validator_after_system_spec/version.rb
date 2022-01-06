@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module RSpecAllRecordValidattorAfterSystemSpec
+module RSpecAllRecordvalidatorAfterSystemSpec
   VERSION = "0.0.1"
 end

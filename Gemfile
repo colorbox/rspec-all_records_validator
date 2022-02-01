@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in rspec_all_record_validator_after_system_spec.gemspec
+# Specify your gem's dependencies in rspec_all_record_validator.gemspec
 gemspec
 
 gem "rake", "~> 13.0"

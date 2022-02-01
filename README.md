@@ -29,7 +29,7 @@ require 'rspec_all_record_validator'
 
 RSpec.configure do |config|
   config.after type: :system do
-    RSpecAllRecordValidattorAfterSystemSpec.validate_all_objects
+    RSpecAllRecordValidattor.validate_all_objects
   end
 end
 ```
@@ -41,7 +41,7 @@ You can avoid validation for specific models:
 ```ruby
 RSpec.configure do |config|
   config.after type: :system do
-    RSpecAllRecordValidattorAfterSystemSpec.validate_all_objects(ignore_models: [DoNotValidatrThisModel])
+    RSpecAllRecordValidattor.validate_all_objects(ignore_models: [DoNotValidatrThisModel])
   end
 end
 ```
@@ -53,7 +53,7 @@ You can config This setting for feature spec
 ```ruby
 RSpec.configure do |config|
   config.after type: ::feature do
-    RSpecAllRecordValidattorAfterSystemSpec.validate_all_objects
+    RSpecAllRecordValidattor.validate_all_objects
   end
 end
 ```

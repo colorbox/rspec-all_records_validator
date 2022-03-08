@@ -4,5 +4,8 @@
 /coverage/
 /doc/
 /pkg/
+/spec/db/*.sqlite3
+/spec/log/
 /spec/reports/
 /tmp/
+/log/

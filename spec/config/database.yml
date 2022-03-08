@@ -1,0 +1,5 @@
+test:
+  adapter: sqlite3
+  database: db/rspec_all_record_validator_test.sqlite3
+  pool: 5
+  timeout: 5000

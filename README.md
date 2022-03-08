@@ -18,7 +18,9 @@ end
 
 And then execute:
 
-    $ bundle install
+```
+$ bundle install
+```
 
 ### Configure
 
@@ -52,7 +54,7 @@ You can config This setting for feature spec
 
 ```ruby
 RSpec.configure do |config|
-  config.after type: ::feature do
+  config.after type: :feature do
     RSpecAllRecordValidattor.validate_all_objects
   end
 end

@@ -8,14 +8,8 @@ module RSpecAllRecordValidator
 
     target_classes.each do |klass|
       klass.all.each do |obj|
-        expect_target(obj)
+        yield(obj)
       end
     end
-  end
-
-  private
-
-  def self.expect_target(record)
-    expect(record).to be_valid
   end
 end

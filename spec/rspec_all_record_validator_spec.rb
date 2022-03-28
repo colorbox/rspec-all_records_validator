@@ -1,11 +1,5 @@
 # frozen_string_literal: true
 
-module RSpecAllRecordValidator
-  def self.expect_target(record)
-    raise StandardError if record.invalid?
-  end
-end
-
 RSpec.describe RSpecAllRecordValidator do
   after do
     Foo.delete_all
@@ -19,7 +13,7 @@ RSpec.describe RSpecAllRecordValidator do
     end
 
     it 'All Records are valid' do
-      expect { RSpecAllRecordValidator.validate_all_objects }.not_to raise_error
+      expect { RSpecAllRecordValidator.validate_all_objects {|record| raise StandardError if record.invalid? } }.not_to raise_error
     end
   end
 
@@ -32,7 +26,7 @@ RSpec.describe RSpecAllRecordValidator do
       end
 
       it 'One record is invalid' do
-        expect { RSpecAllRecordValidator.validate_all_objects }.to raise_error(StandardError)
+        expect { RSpecAllRecordValidator.validate_all_objects {|record| raise StandardError if record.invalid? } }.to raise_error(StandardError)
       end
     end
 
@@ -44,7 +38,7 @@ RSpec.describe RSpecAllRecordValidator do
       end
 
       it 'It ignores an abstract class records' do
-        expect { RSpecAllRecordValidator.validate_all_objects }.not_to raise_error
+        expect { RSpecAllRecordValidator.validate_all_objects {|record| raise StandardError if record.invalid? } }.not_to raise_error
       end
     end
   end

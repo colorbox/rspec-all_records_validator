@@ -3,7 +3,7 @@
 ENV['DB'] ||= 'sqlite3'
 require 'active_record/railtie'
 
-module RSpecAllRecordValidatorTestApp
+module RSpec::AllRecordValidatorTestApp
   Application = Class.new(Rails::Application) do
     # Rais.root
     config.root = __dir__

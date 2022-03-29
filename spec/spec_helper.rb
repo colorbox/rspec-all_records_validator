@@ -3,7 +3,7 @@
 ENV['RAILS_ENV'] ||= 'test'
 
 require 'rails'
-require 'rspec_all_record_validator'
+require 'rspec/all_record_validator'
 require 'active_record'
 require 'fake_app'
 

@@ -1,4 +1,4 @@
-# RSpecAllRecordValidator
+# RSpec::AllRecordValidator
 
 Check all ActiveRecord object validation after system spec.
 
@@ -12,7 +12,7 @@ Add this line to your application's Gemfile in test group:
 
 ```ruby
 group :test do
-  gem 'rspec_all_record_validator'
+  gem 'rspec-all_record_validator'
 end
 ```
 
@@ -27,11 +27,11 @@ $ bundle install
 Add below to your `spec_helper.rb`
 
 ```ruby
-require 'rspec_all_record_validator'
+require 'rspec/all_record_validator'
 
 RSpec.configure do |config|
   config.after type: :system do
-    RSpecAllRecordValidator.validate_all_objects {|record| expect(record).to be_valid }
+    RSpec::AllRecordValidator.validate_all_objects {|record| expect(record).to be_valid }
   end
 end
 ```
@@ -43,7 +43,7 @@ You can avoid validation for specific models:
 ```ruby
 RSpec.configure do |config|
   config.after type: :system do
-    RSpecAllRecordValidator.validate_all_objects(ignore_models: [DoNotValidatrThisModel]) {|record| expect(record).to be_valid }
+    RSpec::AllRecordValidator.validate_all_objects(ignore_models: [DoNotValidatrThisModel]) {|record| expect(record).to be_valid }
   end
 end
 ```
@@ -55,7 +55,7 @@ You can config This setting for feature spec
 ```ruby
 RSpec.configure do |config|
   config.after type: :feature do
-    RSpecAllRecordValidator.validate_all_objects {|record| expect(record).to be_valid }
+    RSpec::AllRecordValidator.validate_all_objects {|record| expect(record).to be_valid }
   end
 end
 ```

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-all_record_validator (0.0.4)
+    rspec-all_record_validator (0.0.5)
 
 GEM
   remote: https://rubygems.org/
@@ -109,6 +109,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.3-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.3-x86_64-linux)
+      racc (~> 1.4)
     racc (1.6.0)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -166,6 +168,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-18
+  x86_64-linux
 
 DEPENDENCIES
   rails

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-all_record_validator (0.0.5)
+    rspec-all_records_validator (0.0.5)
 
 GEM
   remote: https://rubygems.org/
@@ -174,7 +174,7 @@ DEPENDENCIES
   rails
   rake
   rspec
-  rspec-all_record_validator!
+  rspec-all_records_validator!
   sqlite3
 
 BUNDLED WITH

@@ -13,7 +13,7 @@ RSpec.describe RSpec::AllRecordsValidator do
     end
 
     it 'All Records are valid' do
-      expect { RSpec::AllRecordsValidator.validate_all_objects {|record| raise StandardError if record.invalid? } }.not_to raise_error
+      expect { RSpec::AllRecordsValidator.validate! }.not_to raise_error
     end
   end
 
@@ -26,7 +26,7 @@ RSpec.describe RSpec::AllRecordsValidator do
       end
 
       it 'One record is invalid' do
-        expect { RSpec::AllRecordsValidator.validate_all_objects {|record| raise StandardError if record.invalid? } }.to raise_error(StandardError)
+        expect { RSpec::AllRecordsValidator.validate! }.to raise_error(ActiveRecord::RecordInvalid)
       end
     end
 
@@ -38,7 +38,7 @@ RSpec.describe RSpec::AllRecordsValidator do
       end
 
       it 'It ignores an abstract class records' do
-        expect { RSpec::AllRecordsValidator.validate_all_objects {|record| raise StandardError if record.invalid? } }.not_to raise_error
+        expect { RSpec::AllRecordsValidator.validate! }.not_to raise_error
       end
     end
   end

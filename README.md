@@ -43,7 +43,7 @@ You can avoid validation for specific models:
 ```ruby
 RSpec.configure do |config|
   config.after type: :system do
-    RSpec::AllRecordsValidator.validate_all_objects(ignore_models: [DoNotValidatrThisModel]) {|record| expect(record).to be_valid }
+    RSpec::AllRecordsValidator.validate_all_objects(ignored_models: [DoNotValidatrThisModel]) {|record| expect(record).to be_valid }
   end
 end
 ```

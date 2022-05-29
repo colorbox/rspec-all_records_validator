@@ -59,3 +59,15 @@ RSpec.configure do |config|
   end
 end
 ```
+
+### Pro Tip
+
+If you use fixture or master data, ignore them is good for speed.
+
+```ruby
+RSpec::AllRecordsValidator.validate!(ignored_models: [MasterDataModel])
+```
+
+## Contributing
+
+Send me your pull requests.

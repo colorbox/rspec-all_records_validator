@@ -41,5 +41,16 @@ RSpec.describe RSpec::AllRecordsValidator do
         expect { RSpec::AllRecordsValidator.validate! }.not_to raise_error
       end
     end
+
+    context 'With invalid non-has_many model records' do
+      before do
+        baz = Baz.new(name: 'n'*11)
+        baz.save(validate: false)
+      end
+
+      it 'It ignores  model records' do
+        expect { RSpec::AllRecordsValidator.validate! }.not_to raise_error
+      end
+    end
   end
 end

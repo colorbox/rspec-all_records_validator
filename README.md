@@ -1,6 +1,6 @@
 # RSpec::AllRecordsValidator
 
-Check all ActiveRecord object validation after system spec.
+Check all ActiveRecord object validation which has `has_many` association after system spec.
 
 This gem is designed for: [rspec-rails](https://github.com/rspec/rspec-rails)
 

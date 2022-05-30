@@ -48,8 +48,16 @@ RSpec.describe RSpec::AllRecordsValidator do
         baz.save(validate: false)
       end
 
-      it 'It ignores  model records' do
-        expect { RSpec::AllRecordsValidator.validate! }.not_to raise_error
+      after do
+        Baz.first.destroy!
+      end
+
+      it 'It ignores when only_has_many is true' do
+        expect { RSpec::AllRecordsValidator.validate!(only_has_many: true) }.not_to raise_error
+      end
+
+      it 'It raise validation error when only_has_many is false' do
+        expect { RSpec::AllRecordsValidator.validate!(only_has_many: false) }.to raise_error(ActiveRecord::RecordInvalid)
       end
     end
   end

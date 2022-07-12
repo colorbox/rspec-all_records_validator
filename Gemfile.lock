@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-all_records_validator (0.0.9)
+    rspec-all_records_validator (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -168,6 +168,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-18
+  x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
